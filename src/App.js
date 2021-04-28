@@ -1,5 +1,6 @@
 import './App.css';
-import ExpenseItem from "./components/ExpenseItem";
+
+import Expenses from "./components/Expenses";
 
 const expenses = [
     {id: Math.random(), title: 'Car Insurance', amount: 294.67, date: new Date(2021, 2, 28)},
@@ -11,14 +12,7 @@ const expenses = [
 function App() {
   return (
     <div>
-        {expenses.map(el =>
-            <div key={el.id}>
-            <ExpenseItem
-                title={el.title}
-                amount={el.amount}
-                date={el.date}
-            />
-        </div>)}
+     <Expenses expenses={expenses}/>
     </div>
   );
 }
