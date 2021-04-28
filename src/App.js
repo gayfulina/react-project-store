@@ -1,6 +1,6 @@
 import './App.css';
 
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 const expenses = [
     {id: Math.random(), title: 'Car Insurance', amount: 294.67, date: new Date(2021, 2, 28)},
