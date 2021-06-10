@@ -2,10 +2,9 @@ import './ExpenseForm.css'
 import {useState} from "react";
 
 const ExpenseForm = (props) => {
-    const [enteredTitle, setEnteredTitle] = useState('')
-    const [enteredAmount, setEnteredAmount] = useState('')
-    const [enteredDate, setEnteredDate] = useState('')
-
+    const [enteredTitle, setEnteredTitle] = useState('');
+    const [enteredAmount, setEnteredAmount] = useState('');
+    const [enteredDate, setEnteredDate] = useState('');
     // const [userInput, setUserInput] = useState({
     //      title: '',
     //      amount: '',
@@ -23,15 +22,9 @@ const ExpenseForm = (props) => {
     }
     const amountChangeHandler = (e) => {
         setEnteredAmount(e.target.value);
-        // setUserInput(
-        //     ...userInput,
-        //     {setAmount: e.target.value})
     }
     const dateChangeHandler = (e) => {
         setEnteredDate(e.target.value);
-        // setUserInput(
-        //     ...userInput,
-        //     {setDate: e.target.value})
     }
 
     const submitHandler = (event) => {
@@ -75,6 +68,10 @@ const ExpenseForm = (props) => {
                                max="2022-12-31"
                                onChange={dateChangeHandler}
                                value={enteredDate}/>
+                    </div>
+
+                    <div className="new-expense__action">
+                        <button onClick={() => props.toggleHandler()}>Cancel</button>
                     </div>
 
                     <div className="new-expense__action">
